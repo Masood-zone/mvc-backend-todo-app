@@ -23,6 +23,8 @@ const TodoController = {
 
       res.render("index", {
         todos,
+        title: "Kyan Task Manager",
+        siteName: "Todo App",
         activeCount,
         filter,
       });
