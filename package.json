@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "npm run prisma:generate && npm run prisma:migrate && npm run build:css",
+    "build": "npm run prisma:generate && npm run prisma:migrate && npm run build:css && npm run start",
     "start": "node server.js",
     "lint": "next lint",
     "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch",
