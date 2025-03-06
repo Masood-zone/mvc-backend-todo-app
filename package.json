@@ -5,9 +5,13 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
+    "build": "npm run prisma:generate && npm run prisma:migrate && npm run build:css",
     "start": "node server.js",
     "lint": "next lint",
-    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch"
+    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "express",
